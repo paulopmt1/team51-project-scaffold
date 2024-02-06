@@ -39,7 +39,7 @@ jobs:
     - name: Install Node dependencies
       run: npm install
 
-    - name: Remove files from .deployignore fle ignoring # lines
+    - name: Remove files listed on .deployignore
       run: |
         cat .deployignore | grep -v '^#' | xargs rm -rf
 
