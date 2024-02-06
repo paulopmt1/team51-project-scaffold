@@ -39,6 +39,9 @@ jobs:
     - name: Install Node dependencies
       run: npm install
 
+    - name: Build all blocks/scripts/styles
+      run: npm run build
+
     - name: Remove files listed on .deployignore
       run: |
         cat .deployignore | grep -v '^#' | xargs rm -rf
