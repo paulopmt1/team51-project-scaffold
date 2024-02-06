@@ -31,10 +31,11 @@ jobs:
         php_version: 8.1
         args: '--optimize-autoloader --no-dev --profile --ignore-platform-reqs --no-interaction --no-progress --prefer-dist'
 
-    - name: Setup node 20
+    - name: Setup node 19
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: 19
+        cmd: install
 
     - name: Upload the artifact
       uses: actions/upload-artifact@v4
